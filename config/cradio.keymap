@@ -26,22 +26,7 @@
       };
   };
 
-    /*combos {*/
-        /*compatible = "zmk,combos";*/
-    /*combo_sym2 {*/
-      /*timeout-ms = <200>;*/
-      /*key-positions = <31 33>;*/
-      /*bindings = <&mo SYM2>;*/
-    /*};*/
-    /*// both left thumb keys*/
-    /*combo_settings {*/
-      /*timeout-ms = <300>;*/
-      /*key-positions = <30 31>;*/
-      /*bindings = <&mo SETTINGS>;*/
-    /*};*/
-    /*};*/
-
-    keymap {
+  keymap {
   compatible = "zmk,keymap";
 
     // Base alpha layer
@@ -55,36 +40,36 @@
   >;
   };
 
-    // Numbers, symbols and navigation
-    sym_layer {
+    /*// Numbers, symbols and navigation*/
+    /*sym_layer {*/
 
-  bindings = <
-  &kp N1     &kp N2       &kp N3       &kp N4      &kp N5          &kp N6      &kp N7      &kp N8   &kp N9      &kp N0
-  &kp GRAVE  &kp SQT      &kp MINUS    &kp EQUAL   &kp BSPC        &kp LEFT    &kp DOWN    &kp UP   &kp RIGHT   &kp BSLH
-  &kp TAB    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUT   &kp DEL         &kp LBKT    &kp RBKT    &kp LT   &kp GT      &kp QMARK
-          &to BASE                &trans                                    &kp LSHIFT           &to FUN
-  >;
-  };
+  /*bindings = <*/
+  /*&kp N1     &kp N2       &kp N3       &kp N4      &kp N5          &kp N6      &kp N7      &kp N8   &kp N9      &kp N0*/
+  /*&kp GRAVE  &kp SQT      &kp MINUS    &kp EQUAL   &kp BSPC        &kp LEFT    &kp DOWN    &kp UP   &kp RIGHT   &kp BSLH*/
+  /*&kp TAB    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUT   &kp DEL         &kp LBKT    &kp RBKT    &kp LT   &kp GT      &kp QMARK*/
+          /*&to BASE                &trans                                    &kp LSHIFT           &to FUN*/
+  /*>;*/
+  /*};*/
 
-    // Main modifiers and media controls
-    mod_layer {
+    /*// Main modifiers and media controls*/
+    /*mod_layer {*/
 
-  bindings = <
-  &kp ESC     &none       &none      &sk LG(LCTRL) &sk LG(LSHIFT)       &none      &none    &none      &none    &none
-  &sk LSHIFT  &sk LCTRL   &sk LGUI   &sk LALT      &sk RALT             &kp C_PREV &kp C_PP &kp C_NEXT &none    &none
-  &kp LC(Z)   &kp LC(X)   &kp LC(C)  &kp LC(V)     &none                &none      &none    &none      &none    &none
-           &to BASE               &none                                         &none               &to NUMSYMNAV
-  >;
-  };
+  /*bindings = <*/
+  /*&kp ESC     &none       &none      &sk LG(LCTRL) &sk LG(LSHIFT)       &none      &none    &none      &none    &none*/
+  /*&sk LSHIFT  &sk LCTRL   &sk LGUI   &sk LALT      &sk RALT             &kp C_PREV &kp C_PP &kp C_NEXT &none    &none*/
+  /*&kp LC(Z)   &kp LC(X)   &kp LC(C)  &kp LC(V)     &none                &none      &none    &none      &none    &none*/
+           /*&to BASE               &none                                         &none               &to NUMSYMNAV*/
+  /*>;*/
+  /*};*/
 
-    // Function keys with modifiers and blutetooth
-    fnc_layer {
-  bindings = <
-  &kp F1     &kp F2       &kp F3          &kp F4          &kp F5               &kp F6  &kp F7  &kp F8          &kp F9  &kp F10
-  &sk LSHIFT &sk LCTRL    &sk LGUI        &sk LALT        &sk RALT             &none   &none   &kp PRINTSCREEN &kp F11 &kp F12
-  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none   &none   &none           &none   &none
-               &to BASE                     &kp LCTRL                                    &kp LALT                &none
-  >;
-  };
+    /*// Function keys with modifiers and blutetooth*/
+    /*fnc_layer {*/
+  /*bindings = <*/
+  /*&kp F1     &kp F2       &kp F3          &kp F4          &kp F5               &kp F6  &kp F7  &kp F8          &kp F9  &kp F10*/
+  /*&sk LSHIFT &sk LCTRL    &sk LGUI        &sk LALT        &sk RALT             &none   &none   &kp PRINTSCREEN &kp F11 &kp F12*/
+  /*&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none   &none   &none           &none   &none*/
+               /*&to BASE                     &kp LCTRL                                    &kp LALT                &none*/
+  /*>;*/
+  /*};*/
  };
 };
