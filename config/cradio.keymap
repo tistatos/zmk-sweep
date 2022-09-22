@@ -57,7 +57,7 @@
   &kp Q      &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I     &kp O       &kp P
   &kp A      &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K     &kp L       &kp SEMI
   &kp Z      &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA &kp DOT     &kp FSLH
-               &sticky_ht LCTRL MODS   &mt LGUI ENTER                        &ht_tp LSHIFT SPACE &hold_to RALT NUMSYMNAV
+             &sticky_ht LCTRL MODS   &mt LGUI ENTER                          &ht_tp LSHIFT SPACE   &hold_to RALT NUMSYMNAV
   >;
   };
 
@@ -68,7 +68,7 @@
 	&kp N1     &kp N2       &kp N3       &kp N4      &kp N5          &kp N6      &kp N7      &kp N8   &kp N9      &kp N0
 	&kp GRAVE  &kp SQT      &kp MINUS    &kp EQUAL   &kp BSPC        &kp LEFT    &kp DOWN    &kp UP   &kp RIGHT   &kp BSLH
 	&kp TAB    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE  &kp DEL         &kp LBKT    &kp RBKT    &kp LT   &kp GT      &kp QMARK
-					&to BASE                &trans                                    &ht_tp LSHIFT SPACE     &to FUN
+					   &hold_to LCTRL BASE       &trans                                  &trans               &hold_to RALT FUN
 	>;
 	};
 
