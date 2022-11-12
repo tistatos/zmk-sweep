@@ -14,8 +14,10 @@
     #define MODS 2
     #define FUN 3
 // -----------------
+#define HYPR(key) LS(LC(LA(LG(key))))
+
  &mt {
-	tapping-term-ms = <300>;
+	tapping-term-ms = <200>;
  };
 
 / {
@@ -54,10 +56,10 @@
     default_layer {
 
   bindings = <
-  &kp Q      &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I     &kp O       &kp P
-  &kp A      &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K     &kp L       &kp SEMI
-  &kp Z      &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA &kp DOT     &kp FSLH
-             &sticky_ht LCTRL MODS   &mt LGUI ENTER                          &ht_tp LSHIFT SPACE   &hold_to RALT NUMSYMNAV
+  &kp Q      &kp W      &kp E      &kp R      &kp T            &kp Y      &kp U      &kp I      &kp O      &kp P
+  &kp A      &kp S      &kp D      &kp F      &kp G            &kp H      &kp J      &kp K      &kp L      &kp SEMI
+  &kp Z      &kp X      &kp C      &kp V      &kp B            &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+  &sticky_ht LCTRL MODS              &mt LGUI ENTER            &ht_tp LSHIFT SPACE          &hold_to RALT NUMSYMNAV
   >;
   };
 
@@ -67,8 +69,8 @@
 	bindings = <
 	&kp N1     &kp N2       &kp N3       &kp N4      &kp N5          &kp N6      &kp N7      &kp N8   &kp N9      &kp N0
 	&kp GRAVE  &kp SQT      &kp MINUS    &kp EQUAL   &kp BSPC        &kp LEFT    &kp DOWN    &kp UP   &kp RIGHT   &kp BSLH
-	&kp TAB    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE  &kp DEL         &kp LBKT    &kp RBKT    &kp LT   &kp GT      &kp QMARK
-					   &hold_to LCTRL BASE       &trans                                  &trans               &hold_to RALT FUN
+	&kp TAB    &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE  &kp DEL         &kp LBKT    &kp RBKT    &trans   &trans      &trans
+  &hold_to LCTRL BASE                               &trans         &trans                            &hold_to RALT FUN
 	>;
 	};
 
@@ -76,20 +78,20 @@
 		mod_layer {
 
 	bindings = <
-	&kp ESC     &none       &none      &sk LG(LCTRL) &sk LG(LSHIFT)       &none      &none    &none      &none    &none
-	&sk LSHIFT  &sk LCTRL   &sk LGUI   &sk LALT      &sk RALT             &kp C_PREV &kp C_PP &kp C_NEXT &none    &none
-	&kp LC(Z)   &kp LC(X)   &kp LC(C)  &kp LC(V)     &none                &none      &none    &none      &none    &none
-					 &to BASE               &none                                         &none               &to NUMSYMNAV
+	&kp ESC       &none         &none       &sk LG(LCTRL)  &sk LG(LSHIFT)       &kp HYPR(1)  &kp HYPR(2)  &kp HYPR(3)  &kp HYPR(4)  &kp HYPR(5)
+	&sk LSHIFT    &sk LCTRL     &sk LGUI    &sk LALT       &sk RALT             &none        &none        &none        &none        &none
+	&kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)  &kp LC(RIGHT)  &none                &kp C_PREV   &kp C_PP     &kp C_NEXT   &none        &none
+	&to BASE                                               &trans               &trans                                       &to NUMSYMNAV
 	>;
 	};
 
 		// Function keys with modifiers and blutetooth
 		fnc_layer {
 	bindings = <
-	&kp F1     &kp F2       &kp F3          &kp F4          &kp F5               &kp F6  &kp F7  &kp F8          &kp F9  &kp F10
-	&sk LSHIFT &sk LCTRL    &sk LGUI        &sk LALT        &sk RALT             &none   &none   &kp PRINTSCREEN &kp F11 &kp F12
-	&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none   &none   &none           &none   &none
-							 &to BASE                     &kp LCTRL                                    &kp LALT                &none
+	&kp F1     &kp F2       &kp F3          &kp F4          &kp F5         &kp F6  &kp F7  &kp F8          &kp F9  &kp F10
+	&sk LSHIFT &sk LCTRL    &sk LGUI        &sk LALT        &sk RALT       &none   &none   &kp PRINTSCREEN &kp F11 &kp F12
+	&none      &none        &none           &none           &none          &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_CLR
+	&to BASE                     &kp LCTRL                                    &kp LALT                &none
 	>;
 	};
  };
