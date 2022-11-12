@@ -15,6 +15,8 @@
     #define FUN 3
 // -----------------
 
+#define HYPR(key) LS(LC(LA(LG(key))))
+
  &mt {
 	tapping-term-ms = <200>;
  };
@@ -77,7 +79,7 @@
 		mod_layer {
 
 	bindings = <
-	&kp ESC       &none         &none       &sk LG(LCTRL)  &sk LG(LSHIFT)       &kp HYPR(1)  &kp HYPR(2)  &kp HYPR(3)  &kp HYPR(4)  &kp HYPR(5)
+	&kp ESC       &none         &none       &sk LG(LCTRL)  &sk LG(LSHIFT)       &kp HYPR(Y)  &kp HYPR(U)  &kp HYPR(I)  &kp HYPR(O)  &kp HYPR(P)
 	&sk LSHIFT    &sk LCTRL     &sk LGUI    &sk LALT       &sk RALT             &none        &none        &none        &none        &none
 	&kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)  &kp LC(RIGHT)  &none                &kp C_PREV   &kp C_PP     &kp C_NEXT   &none        &none
 	&to BASE                                               &trans               &trans                                       &to NUMSYMNAV
