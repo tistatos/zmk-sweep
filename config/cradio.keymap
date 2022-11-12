@@ -14,7 +14,6 @@
     #define MODS 2
     #define FUN 3
 // -----------------
-#define HYPR(key) LS(LC(LA(LG(key))))
 
  &mt {
 	tapping-term-ms = <200>;
